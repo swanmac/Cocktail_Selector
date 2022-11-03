@@ -13,8 +13,8 @@
 * Link to the WireFrames => Home Page [https://wireframe.cc/EBjusG]  Details Page [https://wireframe.cc/A6vBAf]  About Page [https://wireframe.cc/qcDDDj]
 * Link to the API => [https://www.thecocktaildb.com/api/json/v1/1/random.php]
 
-<img src="cocktail-selector/images/p2h.png" alt="Wireframe-Home">
-<img src="cocktail-selector/images/prd.png" alt="Wireframe-Details">
+<img src="cocktail-selector/images/prh.png" alt="Wireframe-Home">
+<img src="cocktail-selector/images/p2d.png" alt="Wireframe-Details">
 <img src="cocktail-selector/images/p2a.png" alt="Wireframe-About">
 
 
