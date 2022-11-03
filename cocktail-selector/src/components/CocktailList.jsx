@@ -1,6 +1,6 @@
 import React from 'react'
 import Cocktail from './Cocktail'
-
+import Loading from './Loading'
 
 export default function CocktailList() {
 
