@@ -1,6 +1,6 @@
 export default function Footer () {
     
     return (
-        <div><h2> 2022 GS </h2></div>
+        <div><h3> &copy; 2022 GS </h3></div>
     )
 }
