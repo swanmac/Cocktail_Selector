@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
+
 export default function Cocktail ({ image, name, id, info, glass }) {
 
 // we need to create a state for our data
@@ -10,7 +11,7 @@ const [cocktail, setCocktail] = useState([])
 // we need to call an axios function
 useEffect(()=> {
 const getData = async () =>{
-const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita')
+const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
 console.log(response.data.drinks)
 setCocktail(response.data.drinks)
     
@@ -41,10 +42,10 @@ if (!cocktail) {
           <img src={image} alt={name} />
         </div>
         <div className='cocktail-footer'>
-          <h3>{name}</h3>
+          <h3>{cocktail.name}</h3>
           <h4>{glass}</h4>
           <p>{info}</p>
-          <Link to={`/cocktail/${id}`} className='btn btn-primary btn-details'>
+          <Link to={`/singleCocktail/${id}`} className='btn btn-primary btn-details'>
             details
           </Link>
         </div>

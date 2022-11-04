@@ -1,11 +1,26 @@
 import React from 'react';
+import Cocktail from '../components/Cocktail'
+// import CocktailList from '../components/CocktailList'
+import SearchForm from '../components/SearchForm'
 
-function Home(props) {
+export default function Home() {
+
+
+// function Home(props) {
     return (
         <div>
-            <h2> Welcome to my page</h2>
+        <div>
+            <Cocktail />
+            <SearchForm />
+            {/* <CocktailList /> */}
+        </div>
+        <button>Search</button>
+        <div>
+        {/* <form>
+        <input type="text" value={item.id} onChange={ props.handleChange} name={'name'} placeholder={'Search for a cocktail'} />
+        </form> */}
+        </div>
         </div>
     );
 }
 
-export default Home;

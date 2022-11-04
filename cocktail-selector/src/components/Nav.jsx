@@ -6,6 +6,7 @@ export default function Nav () {
             <Link to ="/">Home</Link>
             <Link to ="/cocktail">Cocktails</Link>
             <Link to ="/about">About</Link>
+            {/* <Link to ="/cocktailList">CocktailList</Link> */}
         </div>
     )
 }
