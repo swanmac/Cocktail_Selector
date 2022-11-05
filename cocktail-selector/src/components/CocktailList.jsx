@@ -1,32 +1,29 @@
-// import React from 'react'
-// import { useNavigate } from 'react-router-dom'
-// import { Link } from 'react-router-dom'
+import React from 'react'
+import Cocktail from './Cocktail'
+import Loading from './Loading'
+import { useState } from 'react'
 
-// const CocktailList = (props) => {
 
-//   let navigate = useNavigate()
-
-//   const showCocktail = (cocktail) => {
-//     navigate(`${cocktail.id}`)
-//   }
-
-// return (
-    // <section className='section'>
-    //     <h2 className="section-title"> cocktails</h2>
-    //     {
-    //   props.cocktails.map((cocktail) => (
-    //     <div className="cocktail-card" onClick={() => showCocktail(cocktail)} key={cocktail.id}>
-    //       <h1>hello</h1>
-    //       <img style={{ display: 'block' }} src={cocktail.img} alt={cocktail.name} />
-    //       <h3>{cocktail.name}</h3>
-    //     </div>
-    //   ))}
-    //   <div classname="backHome">
-    //     <Link to="/">back to Home</Link>
-    //   </div>
-    
-    // </section>
-//   )
-// }    
-
-// export default CocktailList
+export default function CocktailList() {
+  const { cocktails, loading } = useState
+  if (loading) {
+    return <Loading/>
+  }
+  if (cocktails.length < 1) {
+    return (
+      <h2 className='section-title'>
+        no cocktails matched your search criteria
+      </h2>
+    )
+  }
+  return (
+    <section className='section'>
+      <h2 className='section-title'>cocktails</h2>
+      <div className='cocktails-center'>
+        {cocktails.map((item) => {
+          return <Cocktail key={item.id} {...item} />
+        })}
+      </div>
+    </section>
+  )
+}

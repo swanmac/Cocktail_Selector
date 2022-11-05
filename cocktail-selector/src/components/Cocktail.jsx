@@ -3,10 +3,11 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 
-export default function Cocktail ({ image, name, id, info, glass }) {
+export default function Cocktail () {
 
 // we need to create a state for our data
-const [cocktail, setCocktail] = useState([])
+const [cocktail, setCocktail, showCocktail] = useState(null)
+// const [selectedDrink, setSelectedDrink]
 
 // we need to call an axios function
 useEffect(()=> {
@@ -14,6 +15,7 @@ const getData = async () =>{
 const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
 console.log(response.data.drinks)
 setCocktail(response.data.drinks)
+// console.log(response.data)
     
 }
 
@@ -25,7 +27,7 @@ getData()
 
 // we need to see the data
 
-console.log(cocktail)
+// console.log(cocktail)
 
 // lets also make a guard operator
 // so if data takes a few seconds
@@ -34,22 +36,26 @@ console.log(cocktail)
 if (!cocktail) {
     return <h2> Loading please wait</h2>
 } else {
+  
+return (  
+  <div className='container'>
+  <div className='title'>
+  <h1>Cocktails!</h1>
+  </div>
+  <div className='grid'>
+    {
+      cocktail.map((cocktail)=>(
+        <div onClick={() => showCocktail(cocktail)} key={cocktail.strDrink} className='card'>
+          <img className='preview' src={`${cocktail.strDrinkThumb}/preview`} />
+          <h2>{cocktail.strDrink}</h2>
+          <h3>{cocktail.strGlass}</h3>
+          <h4>{cocktail.strAlcoholic}</h4>
+          </div>
+          
+      ))}
+  </div>
+  </div>  
 
-
-    return (
-        <article className='cocktail'>
-        <div className='img-container'>
-          <img src={image} alt={name} />
-        </div>
-        <div className='cocktail-footer'>
-          <h3>{cocktail.name}</h3>
-          <h4>{glass}</h4>
-          <p>{info}</p>
-          <Link to={`/singleCocktail/${id}`} className='btn btn-primary btn-details'>
-            details
-          </Link>
-        </div>
-      </article>
-    )
-}
-}
+ 
+)
+}}
