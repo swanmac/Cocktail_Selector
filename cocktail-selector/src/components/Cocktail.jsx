@@ -38,11 +38,12 @@ if (!cocktail) {
 } else {
   
 return (  
-  <div className='container'>
-  <div className='title'>
+  <div className='cocktail'>
+  <div className='img-container'>
+  <div className='cocktail-footer'>
   <h1>Cocktails!</h1>
   </div>
-  <div className='grid'>
+  <div className='cocktails-center'>
     {
       cocktail.map((cocktail)=>(
         <div onClick={() => showCocktail(cocktail)} key={cocktail.strDrink} className='card'>
@@ -50,12 +51,20 @@ return (
           <h2>{cocktail.strDrink}</h2>
           <h3>{cocktail.strGlass}</h3>
           <h4>{cocktail.strAlcoholic}</h4>
+          {/* <Link to={`/singleCocktail/${idDrink}`} className='btn btn-primary btn-details'>
+          details
+        </Link> */}
           </div>
           
+        
+          
       ))}
+      <div classname="backHome">
+          <Link to="/">back to Home</Link>
+          </div>
   </div>
   </div>  
-
+</div>
  
 )
 }}

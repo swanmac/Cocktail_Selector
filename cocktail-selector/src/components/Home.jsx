@@ -10,8 +10,8 @@ export default function Home() {
     return (
         <div>
         <div>
-            <Cocktail />
             <SearchForm />
+            <Cocktail />
             {/* <CocktailList /> */}
         </div>
         <button>Search</button>
