@@ -59,7 +59,7 @@ return (
         
           
       ))}
-      <div classname="backHome">
+      <div className="backHome">
           <Link to="/">back to Home</Link>
           </div>
   </div>

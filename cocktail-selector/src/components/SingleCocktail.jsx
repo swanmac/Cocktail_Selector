@@ -1,22 +1,30 @@
 import React from 'react'
 import Loading from '../components/Loading'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, Navigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const SingleCocktail = (props) => {
 
   const { id } = useParams()
   const [loading, setLoading] = React.useState(false)
-  const [cocktail, setCocktail] = React.useState(null)
+  const [cocktail, setCocktail,] = React.useState(null)
+
+  const showCocktail = (cocktail)=> {
+    Navigate(`${cocktail.idDrink}`)
+  }
+
+console.log(cocktail.idDrink)
+console.log(showCocktail)
 
 
-
-
-  React.useEffect(() => {
+  useEffect(() => {
     setLoading(true)
     async function getCocktail() {
       try {
         const response = await fetch(
-          `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`
         )
         const data = await response.json()
         if (data.drinks) {
