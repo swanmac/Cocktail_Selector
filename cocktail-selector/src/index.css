@@ -247,7 +247,6 @@ Cocktail
 }
 .cocktail img {
   height: 20rem;
-  width: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
@@ -274,7 +273,7 @@ Form
 */
 .search {
   margin-top: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 3rem;
 }
 
 .search-form {

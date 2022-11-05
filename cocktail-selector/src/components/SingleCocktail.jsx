@@ -8,15 +8,15 @@ import axios from 'axios'
 const SingleCocktail = (props) => {
 
   const { id } = useParams()
-  const [loading, setLoading] = React.useState(false)
-  const [cocktail, setCocktail,] = React.useState(null)
+  const [loading, setLoading] = useState(false)
+  const [cocktail, setCocktail,] = useState(null)
 
-  const showCocktail = (cocktail)=> {
-    Navigate(`${cocktail.idDrink}`)
-  }
+//   const showCocktail = (cocktail)=> {
+//     Navigate(`${cocktail.idDrink}`)
+//   }
 
-console.log(cocktail.idDrink)
-console.log(showCocktail)
+// console.log(cocktail.idDrink)
+// console.log(showCocktail)
 
 
   useEffect(() => {
@@ -24,7 +24,7 @@ console.log(showCocktail)
     async function getCocktail() {
       try {
         const response = await fetch(
-          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`
+          `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${id}`
         )
         const data = await response.json()
         if (data.drinks) {

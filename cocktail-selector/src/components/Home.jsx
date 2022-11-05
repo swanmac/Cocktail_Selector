@@ -14,7 +14,7 @@ export default function Home() {
             <Cocktail />
             {/* <CocktailList /> */}
         </div>
-        <button>Search</button>
+        {/* <button>Search</button> */}
         <div>
         {/* <form>
         <input type="text" value={item.id} onChange={ props.handleChange} name={'name'} placeholder={'Search for a cocktail'} />
