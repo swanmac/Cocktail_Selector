@@ -5,7 +5,7 @@ Variables
 */
 :root {
   --primaryLightColor: #d4e6a5;
-  --primaryColor: #476a2e;
+  --primaryColor: blue;
   --primaryDarkColor: #c02c03;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -292,7 +292,9 @@ Form
   margin-bottom: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.25rem;
-  color: var(--primaryColor);
+  color: blue;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 .form-control input {
   width: 100%;
