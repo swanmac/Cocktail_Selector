@@ -54,9 +54,9 @@ return (
           <h2>{cocktail.strDrink}</h2>
           <h3>{cocktail.strGlass}</h3>
           <h4>{cocktail.strAlcoholic}</h4>
-          {/* <Link to={`/cocktail/${strDrink}`} className='btn btn-primary btn-details'>
+          <Link to={'/singleCocktail'} className='btn btn-primary btn-details'>
           details
-        </Link> */}
+        </Link>
           </div>
           
         
