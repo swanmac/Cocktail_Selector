@@ -11,11 +11,11 @@ const SingleCocktail = (props) => {
   const [loading, setLoading] = useState(false)
   const [cocktail, setCocktail,] = useState(null)
 
-//   const showCocktail = (cocktail)=> {
-//     Navigate(`${cocktail.idDrink}`)
-//   }
+  // const showCocktail = (cocktail)=> {
+  //   Navigate(`${cocktail.idDrink}`)
+  // }
 
-// console.log(cocktail.idDrink)
+// console.log(data.drinks)
 // console.log(showCocktail)
 
 

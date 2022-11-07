@@ -1,10 +1,20 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 
 
 export default function Cocktail () {
+
+  let { id } = useParams()
+
+  let navigate = useNavigate()
+
+  const showDrink = (drink) => {
+    
+  }
 
 // we need to create a state for our data
 const [cocktail, setCocktail, showCocktail] = useState(null)
@@ -49,7 +59,7 @@ return (
   <div className='cocktails-center'>
     {
       cocktail.map((cocktail)=>(
-        <div onClick={() => showCocktail(cocktail)} key={cocktail.strDrink} className='card'>
+        <div onClick={() => showDrink(cocktail)} key={cocktail.strDrink} className='card'>
           <img className='preview' src={`${cocktail.strDrinkThumb}/preview`} />
           <h2>{cocktail.strDrink}</h2>
           <h3>{cocktail.strGlass}</h3>
