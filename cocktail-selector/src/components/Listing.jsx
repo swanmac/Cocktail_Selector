@@ -1,45 +1,13 @@
 import React from "react";
-import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import axios from 'axios'
 
-export default function Listing() {
-  
-  let { id } = useParams()
-
-  const [cocktail, setCocktail, showCocktail] = useState(null)
-
-  useEffect(()=>{   
-    const getData = async () =>{ 
-    const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')  
-    console.log(response.data.drinks)  
-    setCocktail(response.data.drinks)
-    }
-getData()
-  
-}, [])
-
-if(!cocktail) {
-    return <h2>Loading Drink...</h2>
-}else{
-  
-  
+export default function About() {
   return (
-    <div className='cocktail'>
-    <div className='img-container'>
-    <h1>{cocktail.strDrink}</h1>
-    </div>
-    <div className='cocktails-center'>
-    {
-    <div key={cocktail.strIngredient}
-    className=''>
-    <div className='preview'>
-    <h3>{cocktail.strDescription}</h3>
-    <h3>{cocktail.strABV}</h3>
-    </div>
-    </div>
-    }
-    </div>   
-    </div>
-)
-}}
+    <section className="section about-section">
+      <h1 className="section-title">about us</h1>
+      <p>
+        Test info
+    
+      </p>
+    </section>
+  );
+}
