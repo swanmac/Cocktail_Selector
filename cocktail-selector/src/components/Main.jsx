@@ -13,8 +13,8 @@ export default function Main () {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 {/* <Route path="/cocktail" element={<Cocktail/>}/> */}
-                <Route path='/cocktail/:strDrink' element={ <SingleCocktail/>} />
-                <Route path="/components/listing" element={ <Listing/>} />
+                <Route path='/singleCocktail' element={ <SingleCocktail/>} />
+                <Route path="/listing" element={ <Listing/>} />
                 <Route path="/cocktailList" element={ <CocktailList/>} />
                 <Route path="/about" element={<About/>}/>
             </Routes>
