@@ -132,7 +132,7 @@ Navbar
 ======
 */
 .navbar {
-  background: var(--mainWhite);
+  background: rgb(156, 206, 237);
   height: 5rem;
   display: flex;
   align-items: center;
@@ -280,7 +280,7 @@ Form
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--maxWidth);
-  background: var(--mainWhite);
+  background: rgb(156, 206, 237);
   padding: 2rem 2.5rem;
   text-transform: capitalize;
   border-radius: var(--mainBorderRadius);
