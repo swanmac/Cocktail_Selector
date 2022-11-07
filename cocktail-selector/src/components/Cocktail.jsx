@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 
+
 export default function Cocktail () {
 
 // we need to create a state for our data
@@ -22,6 +23,8 @@ setCocktail(response.data.drinks)
 getData()
 
 }, [])
+
+
 
 // we need to set state of our data
 
@@ -51,7 +54,7 @@ return (
           <h2>{cocktail.strDrink}</h2>
           <h3>{cocktail.strGlass}</h3>
           <h4>{cocktail.strAlcoholic}</h4>
-          {/* <Link to={`/cocktail/${id}`} className='btn btn-primary btn-details'>
+          {/* <Link to={`/cocktail/${strDrink}`} className='btn btn-primary btn-details'>
           details
         </Link> */}
           </div>
