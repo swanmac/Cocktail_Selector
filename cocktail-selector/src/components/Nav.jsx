@@ -7,7 +7,7 @@ export default function Nav () {
         <div className='nav-center'>
             <Link to ="/">Home</Link>
             {/* <Link to ="/listing">Listing</Link> */}
-            <Link to ="/cocktail/:id">Single Cocktail</Link>
+            {/* <Link to ="/cocktail/:id">Single Cocktail</Link> */}
             <Link to ="/about">About</Link>
             {/* <Link to ="/cocktailList">CocktailList</Link> */}
         </div>

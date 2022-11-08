@@ -1,9 +1,7 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 export default function SearchForm(props) {
-
-  // const { setSearchTerm } = useState()
 
 const [searchTerm, setSearchTerm] = useState('')
 
@@ -15,7 +13,7 @@ const handleSubmit = (e) => {
 const handleChange = (e) => {
   setSearchTerm({ ...searchTerm, ['']: e.target.value  })
   
-  console.log(searchTerm[""].toLowerCase())
+  // console.log(searchTerm[""].toLowerCase())
 props.setCocktail(props.cocktail.filter(drink=>drink.strDrink.toLowerCase().includes(searchTerm[""].toLowerCase())===true))
 };
 
@@ -27,19 +25,7 @@ const getSearch = async () => {
   console.log(response.data.drinks)
 };
 
- 
 
-
-// useEffect(() => {
-//     searchValue.current.focus()
-//   }, [])
-// console.log(searchValue)
-//   function searchCocktail() {
-//     setSearchTerm(searchValue.current.searchValue)
-//   }
-//   function handleSubmit(e) {
-//     e.preventDefault()
-//   }
   return (
     <section className='section search'>
       <form className='search-form' >
@@ -51,11 +37,11 @@ const getSearch = async () => {
             id='name'
             onChange={handleChange}
           />
-          <button onSubmit={handleSubmit}>Search</button>
+          <button onSubmit={handleSubmit}>Start Over</button>
         </div>
       </form> 
       
     </section>
     
   )
-}
+  }
