@@ -1,7 +1,7 @@
 import React from 'react';
 import Cocktail from '../components/Cocktail'
 // import CocktailList from '../components/CocktailList'
-import SearchForm from '../components/SearchForm'
+
 
 export default function Home() {
 
@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <div>
         <div>
-            <SearchForm />
+            
             <Cocktail />
             {/* <CocktailList /> */}
         </div>

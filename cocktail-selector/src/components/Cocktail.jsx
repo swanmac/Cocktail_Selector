@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import SearchForm from '../components/SearchForm'
 import { useParams } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
@@ -49,7 +50,9 @@ if (!cocktail) {
 } else {
   
 return (  
+   
   <div className='cocktail'>
+    <SearchForm setCocktail={setCocktail} cocktail={cocktail}/>
   <div className='img-container'>
   <div className='cocktail-footer'>
   <h1>Cocktails!</h1>

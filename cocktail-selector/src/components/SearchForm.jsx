@@ -1,21 +1,22 @@
 import React from 'react'
 import { useState, useRef } from 'react'
 import axios from 'axios'
-export default function SearchForm() {
+export default function SearchForm(props) {
 
   // const { setSearchTerm } = useState()
 
 const [searchTerm, setSearchTerm] = useState('')
 
 const handleSubmit = (e) => {
-  // e.preventdefault()
+  e.preventdefault()
   getSearch()
 }
 
 const handleChange = (e) => {
-  setSearchTerm({ ...searchTerm, [e.target.id]: e.target.value  })
-  // setSearchTerm(...searchTerm, e)
-  console.log(searchTerm)
+  setSearchTerm({ ...searchTerm, ['']: e.target.value  })
+  
+  console.log(searchTerm[""].toLowerCase())
+props.setCocktail(props.cocktail.filter(drink=>drink.strDrink.toLowerCase().includes(searchTerm[""].toLowerCase())===true))
 };
 
 const getSearch = async () => {
@@ -50,9 +51,9 @@ const getSearch = async () => {
             id='name'
             onChange={handleChange}
           />
-          <button>Search</button>
+          <button onSubmit={handleSubmit}>Search</button>
         </div>
-      </form>
+      </form> 
       
     </section>
     
