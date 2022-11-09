@@ -27,6 +27,8 @@
 
 * Link to the API => [https://www.thecocktaildb.com/api/json/v1/1/search.php?s=]
 
+* Link to the Deployed Page => [https://prickly-credit99.surge.sh/]
+
 # Project WireFrames
 <img src="cocktail-selector/images/prh.png" alt="Wireframe-Home">
 <img src="cocktail-selector/images/p2d.png" alt="Wireframe-Details">
