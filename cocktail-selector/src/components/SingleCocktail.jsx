@@ -11,14 +11,6 @@ const SingleCocktail = (props) => {
   const [loading, setLoading] = useState(false)
   const [cocktail, setCocktail,] = useState(null)
 
-  // const showCocktail = (cocktail)=> {
-  //   Navigate(`${cocktail.idDrink}`)
-  // }
-
-// console.log(data.drinks)
-// console.log(showCocktail)
-
-
   useEffect(() => {
     setLoading(true)
     async function getCocktail() {

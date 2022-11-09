@@ -3,8 +3,6 @@ import { useState } from 'react'
 import axios from 'axios'
 export default function SearchForm(props) {
 
- 
-
 const [searchTerm, setSearchTerm] = useState('')
 
 const handleSubmit = (e) => {

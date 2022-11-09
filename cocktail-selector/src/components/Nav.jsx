@@ -9,10 +9,8 @@ export default function Nav () {
           <img src={logo} alt='cocktail db logo' className='logo' />
         </Link>
             <Link to ="/">Home</Link>
-            {/* <Link to ="/listing">Listing</Link> */}
-            {/* <Link to ="/cocktail/:id">Single Cocktail</Link> */}
             <Link to ="/about">About</Link>
-            {/* <Link to ="/cocktailList">CocktailList</Link> */}
+
         </div>
         </nav>
         </div>

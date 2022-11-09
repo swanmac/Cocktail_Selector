@@ -3,8 +3,7 @@ import Home from './Home'
 import Cocktail from './Cocktail'
 import About from './About'
 import SingleCocktail from './SingleCocktail'
-import CocktailList from './CocktailList'
-import Listing from '../components/Listing'
+
 
 
 export default function Main () {
@@ -14,8 +13,6 @@ export default function Main () {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/cocktail" element={<Cocktail/>}/>
                 <Route path='/cocktail/:id' element={ <SingleCocktail/>} />
-                <Route path="/listing" element={ <Listing/>} />
-                <Route path="/cocktailList" element={ <CocktailList/>} />
                 <Route path="/about" element={<About/>}/>
             </Routes>
         </div>
