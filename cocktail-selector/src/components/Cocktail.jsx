@@ -55,7 +55,7 @@ return (
     <SearchForm setCocktail={setCocktail} cocktail={cocktail}/>
   <div className='img-container'>
   <div className='cocktail-footer'>
-  <h1>Cocktails!</h1>
+  {/* <h1>Cocktails!</h1> */}
   </div>
   <div className='cocktails-center'>
     {
@@ -74,7 +74,7 @@ return (
           
       ))}
       <div className="backHome">
-      <Link to='/' className='btn btn-primary'>
+      <Link to='/cocktail' className='btn btn-primary'>
           back home
         </Link>
           </div>

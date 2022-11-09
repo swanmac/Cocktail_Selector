@@ -3,6 +3,8 @@ import { useState } from 'react'
 import axios from 'axios'
 export default function SearchForm(props) {
 
+ 
+
 const [searchTerm, setSearchTerm] = useState('')
 
 const handleSubmit = (e) => {
@@ -13,7 +15,7 @@ const handleSubmit = (e) => {
 const handleChange = (e) => {
   setSearchTerm({ ...searchTerm, ['']: e.target.value  })
   
-  // console.log(searchTerm[""].toLowerCase())
+  console.log(searchTerm[""].toLowerCase())
 props.setCocktail(props.cocktail.filter(drink=>drink.strDrink.toLowerCase().includes(searchTerm[""].toLowerCase())===true))
 };
 
