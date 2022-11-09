@@ -25,7 +25,7 @@
   * Details Page [https://wireframe.cc/A6vBAf]  
   * About Page [https://wireframe.cc/qcDDDj]
 
-* Link to the API => [https://www.thecocktaildb.com/api/json/v1/1/random.php]
+* Link to the API => [https://www.thecocktaildb.com/api/json/v1/1/search.php?s=]
 
 # Project WireFrames
 <img src="cocktail-selector/images/prh.png" alt="Wireframe-Home">
