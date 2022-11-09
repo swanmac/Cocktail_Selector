@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SearchForm from '../components/SearchForm'
-import { useParams } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
-
 
 export default function Cocktail () {
 
@@ -23,23 +20,17 @@ const [cocktail, setCocktail, showCocktail] = useState(null)
 useEffect(()=> {
 const getData = async () =>{
 const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
+
+// we need to see the data
 console.log(response.data.drinks)
 setCocktail(response.data.drinks)
-// console.log(response.data)
-    
+
 }
 
 getData()
 
 }, [])
 
-
-
-// we need to set state of our data
-
-// we need to see the data
-
-// console.log(cocktail)
 
 // lets also make a guard operator
 // so if data takes a few seconds
@@ -67,9 +58,7 @@ return (
           <Link to={`/cocktail/${cocktail.idDrink}`} className='btn btn-primary btn-details'>
           details
         </Link>
-          </div>
-          
-        
+          </div>       
           
       ))}
       <div className="backHome">
