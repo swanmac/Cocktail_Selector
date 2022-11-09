@@ -21,9 +21,9 @@
 * Link to the Trello Board [https://trello.com/b/mxtC7m1k/project-management] 
 
 * Links to the WireFrames => 
-⋅⋅* Home Page [https://wireframe.cc/EBjusG]  
-⋅⋅*Details Page [https://wireframe.cc/A6vBAf]  
-⋅⋅* About Page [https://wireframe.cc/qcDDDj]
+  * Home Page [https://wireframe.cc/EBjusG]  
+  * Details Page [https://wireframe.cc/A6vBAf]  
+  * About Page [https://wireframe.cc/qcDDDj]
 
 * Link to the API => [https://www.thecocktaildb.com/api/json/v1/1/random.php]
 
