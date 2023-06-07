@@ -2,7 +2,7 @@
 ## A website to help educate the user to make an informed decision on cocktail selection.
 * **_The Cocktail Selector_** is a website that provides detailed information on a list of different cocktails enabling the user to make an informed decision when choosing a cocktail. 
 * **The Layout** - Navigation links at the top of the page are to "Home" the Home page and "About" the About page. Below the navigation links is the Search Form. The Search Form is labeled "Search Your Favorite Cocktail" and contains a text input bar and a Start Over button.
-* **Search Form** - The search form allows the user to select a single or group of cocktails by entering the first few letters in the name of the cocktail into the text input bar. The Start Over button is used to reset the search form or start over.
+* **Search Form** - The search form allows the user to select a single or group of cocktails by entering the first letter in the name of the cocktail into the text input bar. The Start Over button is used to reset the search form or start over.
 * To start, you can take one of two actions.
 * **Action one:** Enter the first few letters in the name of your favorite cocktail into the search form text input bar. The search results will automatically display below in the list of cocktails.
 * After taking Action one, you will be shown either a group of cocktails or one cocktail matching your search of cocktails that their name contains the letter or letters that you have entered into the search form text input bar. At this point you may choose one of the cocktails displayed in the search results and then select the "Details" button on that specific cocktail.

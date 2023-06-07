@@ -21,7 +21,7 @@ useEffect(()=> {
 const getData = async () =>{
 const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=')
 
-// we need to see the data
+// we need to see the data and store it in state
 console.log(response.data.drinks)
 setCocktail(response.data.drinks)
 
